@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Page</title>
+  <style>
+    @font-face {
+    font-family: 'Movement Sans';
+    src: url('/style/fonts/MovementV.woff2');
+    font-weight: 100 1000;
+    font-display: swap;
+}
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      overflow: hidden;
+    }
+    .loading-text {
+      font-size: 50px;
+      color: #333;
+      text-align: center;
+      font-family: 'Movement Sans';
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-text">LOADING...</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script>
+    // Animation for the loading text
+    gsap.from(".loading-text", { opacity: 0, scale: 0.5, duration: 1, delay: 0.5, ease: "power2.out" });
+    gsap.to(".loading-text", { opacity: 0, scale: 0, duration: 0.5, delay: 2.5, ease: "power2.in" });
+
+    // Simulate a delay before transitioning to the main content
+    setTimeout(function() {
+      window.location.href = "index.html";
+    }, 3000); // Adjust the delay duration (in milliseconds) as needed
+  </script>
+</body>
+</html>

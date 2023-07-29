@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="blob"></div>
+    <div id="blur"></div>
+    <div class="wrapper">
+
+        <header>
+            <ul id="header-ul">
+                <li id="about"><a href="#about-content"><span class="A-hover">A</span>BOUT</a></li>    
+                <li id="work"><a href="#Work-content">WO<span class="A-hover">R</span>K</a></li>                  
+                <li id="talk"><a  href="mailto:contact.darkostefkovski@gmail.com">LET'S T<span class="A-hover">A</span>LK</a></li>
+            </ul>
+        </header>
+    
+        <section>     
+            <div class="center-container">
+                <div class="center-content">
+                    <h1 class="headline">D<span class="A">A</span><span class="R">R</span>KO STEFKOVSKI CODE <span class="and">&</span> DESI<span class="G">G</span>N</h1>
+                </div>
+              </div>
+        </section>
+    
+        <div id="about-content" class="about-content">
+          <span class="border"></span>
+            <p>
+                Hello, my name is Darko Stefkovski. I am a front-end developer specializing in website UI/UX design. With over 2 years of professional experience in the field, I am proficient in developing responsive and user-friendly websites that meet the needs of clients and their audiences. In addition to website design, I also have a passion for making video games.<br><br>
+                In addition to my front-end development skills, I am proficient in using various technologies and frameworks such as HTML, CSS, JavaScript, Jquery. I am well-versed in translating design mockups into functional websites, ensuring pixel-perfect accuracy and smooth interactions. With a keen eye for detail, I strive to create visually striking designs that not only capture attention but also enhance usability. I am dedicated to staying up-to-date with the latest industry advancements and continuously expanding my skill set to provide the best possible solutions for clients.
+                Each project is an opportuinity to learn new concepts across multiple domains including arts, maths and physics.
+            </p>
+        </div>
+    
+        <div id="Work-content">
+          <h3>PROJECTS</h3>
+            <div class="card-grid">
+              <div class="card">
+                <img src="https://source.unsplash.com/random/?productivity,city" alt="Image 1" loading="lazy">
+                <div class="card-content"></div>
+              </div>
+              <div class="card">
+                <img src="https://source.unsplash.com/random/?nature" alt="Image 2" loading="lazy">
+                <div class="card-content"></div>
+              </div>
+              <div class="card">
+                <img src="https://source.unsplash.com/random/?3D" alt="Image 3" loading="lazy">
+                <div class="card-content"></div>
+              </div>
+              <div class="card">
+                <img src="https://source.unsplash.com/random/?urban" alt="Image 4" loading="lazy">
+                <div class="card-content"></div>
+              </div>
+              <div class="card">
+                <img src="https://source.unsplash.com/random/?basketball" alt="Image 5" loading="lazy">
+                <div class="card-content"></div>
+              </div>
+              <div class="card">
+                <img src="https://source.unsplash.com/random/?car" alt="Image 6" >
+                <div class="card-content"></div>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="style/gsap.js"></script>
+    <script>
+    
+
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
+      console.log(e)
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+    </script>
+</body>
+</html>
